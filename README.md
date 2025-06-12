@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mood Tracker
+
+A lightweight web application for teams to track daily mood check-ins. Employees can submit their current mood along with an optional comment. Admins can view and analyze submissions through a clean, responsive dashboard.
+
+---
+
+## Features
+
+### Employee Interface
+
+* Select mood from predefined options: Happy, Neutral, Sad
+* Optional comment box
+* Simple and accessible UI
+* Responsive design
+* Confirmation message after submission
+
+### Admin Dashboard
+
+* View all mood submissions in a table
+* Stats cards for total moods, and counts for each type
+* Emoji and color-coded mood indicators
+* Responsive table layout
+* Refresh data manually
+* Handles empty and error states gracefully
+
+---
+
+## Tech Stack
+
+* **Next.js (App Router)**
+* **TypeScript**
+* **Tailwind CSS**
+* **shadcn/ui** for UI components
+* **Custom ThemeProvider** for dark/light mode
+* **Local API routes** for storing/retrieving mood entries (in-memory or mock)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/mood-tracker.git
+cd mood-tracker
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn
+```
+
+### 3. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
+### Employee
 
-To learn more about Next.js, take a look at the following resources:
+* Go to `/mood`
+* Select a mood, optionally add a comment
+* Submit and see confirmation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Admin
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Visit `/admin`
+* View all submissions with date & time
+* Analyze mood distribution in stat cards
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Folder Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+/app
+  /mood         → Mood submission page
+  /admin        → Admin dashboard
+  /api/mood     → API route for GET/POST moods
+/components
+  /ui           → Button, Card, Table, ThemeProvider, ModeToggle
+/public         → Static assets
+```
+
+---
+
+## Dark Mode Support
+
+* Custom `ThemeProvider` based on system preference
+* Toggle button (`ModeToggle`) in layout
+* Works with Tailwind `dark:` classes
+
+---
+
+## Future Enhancements
+
+* Take Employee name as input and allow to keep anonimity 
+* Persist mood data using a database (e.g., Supabase, MongoDB)
+* Add date filtering and sorting by Employee names or date/time
+* Weekly mood trend graph (chart)
+* CSV export option for admin
+* Authentication for admin access
+
+---
+
+## License
+
+MIT License © 2025 Malya Srivastava
