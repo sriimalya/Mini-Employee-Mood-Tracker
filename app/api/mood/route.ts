@@ -21,7 +21,7 @@ export async function POST(req: Request) {
 
     moodStore.unshift(entry); 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 500 });
   }
 }
