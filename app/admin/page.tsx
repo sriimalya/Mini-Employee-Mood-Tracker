@@ -62,7 +62,7 @@ export default function AdminPage() {
   )
 
   return (
-    <div className="min-h-screen bg-muted/20 px-4 py-8">
+    <div className="min-h-full bg-muted/20 px-4 py-8">
       <div className="max-w-5xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold">Admin Dashboard</h1>

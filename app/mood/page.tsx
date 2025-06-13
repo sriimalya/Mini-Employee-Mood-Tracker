@@ -78,7 +78,7 @@ export default function MoodPage() {
     }
 
     return (
-        <div className="flex min-h-screen items-center justify-center p-4">
+        <div className="flex flex-1 items-center justify-center min-h-full px-4">
             <div className="space-y-6 max-w-md w-full text-center">
 
                 <h2 className="text-3xl font-bold">

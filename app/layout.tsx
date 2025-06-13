@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen flex flex-col">
         <ThemeProvider
           defaultTheme="light"
           storageKey="mood-tracker-theme"
         >
-          <header className="w-full px-6 py-4 border-b flex justify-between items-center">
+          <header className="sticky top-0 z-50 w-full px-6 py-4 border-b flex justify-between items-center">
             <h1 className="text-lg font-semibold">Mood Tracker</h1>
             <div className="flex items-center space-x-4">
                 <Link href="/admin">
@@ -32,7 +32,7 @@ export default function RootLayout({
               <ModeToggle />
             </div>
           </header>
-          <main>{children}</main>
+          <main className="flex-1 flex flex-col">{children}</main>
         </ThemeProvider>
       </body>
     </html>
